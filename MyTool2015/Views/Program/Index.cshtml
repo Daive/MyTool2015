@@ -5,5 +5,14 @@
 
 <h2>Index</h2>
 
+@using (Html.BeginForm("Index", "Program", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+    
+    <textarea rows="8" cols="800" name="strUrl"  >
+        @ViewBag.strUrl
+    </textarea>
+    <input type="submit" value="运行" class="btn btn-primary btn-lg" />
 
-<p><a href="Program/Run" class="btn btn-primary btn-lg">运行</a></p>
+}
+<p>length:@ViewBag.length</p>
+<p>@ViewBag.content</p>
